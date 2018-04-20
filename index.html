@@ -13,6 +13,26 @@
 </body>
 
 <script>
-alert('File Linked');
+var person = {
+	"firstName" : "Allen",
+	"lastName" : "Sanderlin",
+	"getFullName" : function() {
+		return this.firstName + " " + this.lastName;
+	},
+	"address" : {
+		"street" : "123 JS Street",
+		"city" : "San Mateo",
+		"state" : "CA"
+	},
+	"isFromState" : function(state)
+	{
+		return state === this.address.state;
+	}
+}
+
+console.log(person.getFullName());
+console.log("is CA " + person.isFromState("CA"));
+console.log("is SC " + person.isFromState("SC"));
 </script>
+
 </html>
